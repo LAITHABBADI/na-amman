@@ -1,148 +1,137 @@
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NA Amman Meetings | Meeting Schedule</title>
-    <meta name="description" content="Narcotics Anonymous meeting schedule in Amman. Free daily meetings for addiction recovery.">
-    <meta name="keywords" content="NA meetings, recovery groups, NA Amman meetings, meeting schedule, addiction recovery meetings">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-</head>
-<body class="bg-gray-50">
-    <header class="bg-blue-600">
-        <div class="container mx-auto py-4 px-4">
-            <div class="flex justify-between items-center">
-                <img src="../assets/images/na-logo.png" alt="NA Logo" class="h-20">
-                <a href="meetings.html" class="text-white hover:text-blue-200">عربي</a>
+import React, { useState } from 'react';
+import { MapPin, Calendar, Clock, Info } from 'lucide-react';
+
+const NASchedule = () => {
+  const [selectedDay, setSelectedDay] = useState(null);
+  
+  const meetings = [
+    {
+      day: 'Tuesday',
+      time: '8:30 PM - 9:30 PM',
+      location: 'Sweifieh',
+      address: 'Paris Street, Alzaitoneh Complex (B), Second Floor, Office #204',
+      type: 'Steps and Traditions Study',
+      mapUrl: 'https://maps.app.goo.gl/UvR9mwhhZ37XxFJB7',
+      details: {
+        parking: 'Parking available in front of the building',
+        landmark: 'Near Sweifieh Circle'
+      }
+    },
+    {
+      day: 'Thursday',
+      time: '8:30 PM - 9:30 PM',
+      location: 'Sweifieh',
+      address: 'Paris Street, Alzaitoneh Complex (B), Second Floor, Office #204',
+      type: 'Experience, Strength & Hope Sharing',
+      mapUrl: 'https://maps.app.goo.gl/UvR9mwhhZ37XxFJB7',
+      details: {
+        parking: 'Parking available in front of the building',
+        landmark: 'Near Sweifieh Circle'
+      }
+    },
+    {
+      day: 'Saturday',
+      time: '7:30 PM - 8:30 PM',
+      location: 'Um Utheina',
+      address: 'Mecca Street, Building #33',
+      type: 'Open discussion meeting',
+      mapUrl: 'https://g.co/kgs/FhbWnJa',
+      details: {
+        parking: 'Street parking available',
+        landmark: 'Opposite Sultan Center'
+      }
+    }
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+          <header className="bg-blue-600">
+        <div className="container mx-auto py-4 px-4">
+            <div className="flex justify-between items-center">
+                <div className="w-20"></div>
+                <img src="assets/na-logo.svg" alt="NA Logo" className="h-20" />
+                <a href="meetings.html" className="text-white hover:text-blue-200">عربي</a>
             </div>
-            <nav class="mt-4">
-                <ul class="flex flex-wrap justify-center space-x-8 text-white">
-                    <li><a href="../index-en.html" class="hover:text-blue-200">Home</a></li>
-                    <li><a href="meetings-en.html" class="hover:text-blue-200">Meetings</a></li>
-                    <li><a href="literature-en.html" class="hover:text-blue-200">Literature</a></li>
-                    <li><a href="../index-en.html#contact" class="hover:text-blue-200">Contact</a></li>
+            <nav className="mt-4">
+                <ul className="flex flex-wrap justify-center space-x-8 text-white">
+                    <li><a href="../index-en.html" className="hover:text-blue-200">Home</a></li>
+                    <li><a href="meetings-en.html" className="hover:text-blue-200">Meetings</a></li>
+                    <li><a href="literature-en.html" className="hover:text-blue-200">Literature</a></li>
+                    <li><a href="../index-en.html#contact" className="hover:text-blue-200">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
+    <div className="bg-blue-600 text-white p-6">
+        <h1 className="text-3xl font-bold text-center mb-4">NA Meetings in Amman</h1>
+        <p className="text-center">All meetings are free and open to newcomers</p>
+    </div>
 
-    <main class="container mx-auto px-4 py-8">
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h1 class="text-4xl font-bold mb-6 text-center">NA Meetings in Amman</h1>
-            
-            <div class="bg-blue-50 rounded-lg p-6 mb-8">
-                <h2 class="text-2xl font-bold mb-4">Important Information for Newcomers:</h2>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>All meetings are completely free</li>
-                    <li>No registration required - just show up</li>
-                    <li>Newcomers are welcome at all meetings</li>
-                    <li>Please arrive 15 minutes before meeting time</li>
-                    <li>We maintain strict confidentiality for all attendees</li>
-                </ul>
+      {/* Schedule Grid */}
+      <div className="mt-6 space-y-4">
+        {meetings.map((meeting, index) => (
+          <div 
+            key={`${meeting.day}-${meeting.location}`}
+            className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+          >
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <Calendar className="text-blue-600" />
+                <span className="font-bold text-lg">{meeting.day}</span>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <Clock className="text-blue-600" />
+                <span>{meeting.time}</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="text-blue-600" />
+                <span className="font-medium">{meeting.location}</span>
+                <a 
+                  href={meeting.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700"
+                >
+                  View Map
+                </a>
+              </div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-8">
-                <div class="border rounded-lg p-6">
-                    <h3 class="text-2xl font-bold mb-4">Sweifieh Meetings</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="font-bold text-lg mb-2">Tuesday & Thursday</h4>
-                            <p>Time: 8:30 PM - 9:30 PM</p>
-                            <p>Location: Sweifieh, Paris Street</p>
-                            <p>Alzaitoneh Complex (B), Second Floor, Office #204</p>
-                            <div class="mt-2">
-                                <p class="font-bold">Meeting Types:</p>
-                                <ul class="list-disc list-inside">
-                                    <li>Tuesday: Steps and Traditions Study</li>
-                                    <li>Thursday: Experience, Strength & Hope Sharing</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border rounded-lg p-6">
-                    <h3 class="text-2xl font-bold mb-4">Um Utheina Meetings</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="font-bold text-lg mb-2">Saturday</h4>
-                            <p>Time: 7:30 PM - 8:30 PM</p>
-                            <p>Location: Um Utheina, Mecca Street</p>
-                            <p>Building #33</p>
-                            <div class="mt-2">
-                                <p class="font-bold">Meeting Type:</p>
-                                <p>Open discussion meeting</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="mt-4 pl-8">
+              <p className="text-gray-600">{meeting.address}</p>
+              <p className="mt-2 font-medium">Meeting Type: {meeting.type}</p>
+              <div className="mt-2 text-sm text-gray-500">
+                <p>• {meeting.details.landmark}</p>
+                <p>• {meeting.details.parking}</p>
+              </div>
             </div>
+          </div>
+        ))}
+      </div>
 
-            <div class="mt-8">
-                <h3 class="text-2xl font-bold mb-4">Meeting Types</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="border rounded-lg p-4">
-                        <h4 class="font-bold text-lg mb-2">Closed Meetings</h4>
-                        <p>For addicts only, or those who think they may have a drug problem</p>
-                    </div>
-                    <div class="border rounded-lg p-4">
-                        <h4 class="font-bold text-lg mb-2">Open Meetings</h4>
-                        <p>Can be attended by family, friends, and interested people</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-8 bg-gray-50 rounded-lg p-6">
-                <h3 class="text-2xl font-bold mb-4">Meeting Formats</h3>
-                <div class="space-y-4">
-                    <div class="border rounded-lg p-4">
-                        <h4 class="font-bold">Speaker Meetings</h4>
-                        <p>Members share their experience, strength, and hope in recovery</p>
-                    </div>
-                    <div class="border rounded-lg p-4">
-                        <h4 class="font-bold">Step Study</h4>
-                        <p>Study and application of the Twelve Steps program</p>
-                    </div>
-                    <div class="border rounded-lg p-4">
-                        <h4 class="font-bold">Topic Discussion</h4>
-                        <p>Open discussion on recovery-related topics</p>
-                    </div>
-                    <div class="border rounded-lg p-4">
-                        <h4 class="font-bold">Newcomer Meetings</h4>
-                        <p>Special focus on welcoming and supporting new members</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-8 bg-yellow-50 rounded-lg p-6">
-                <h3 class="text-2xl font-bold mb-4">Getting to Our Meetings</h3>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="text-xl font-bold mb-3">Sweifieh Location</h4>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li>Near Sweifieh Circle</li>
-                            <li>Alzaitoneh Commercial Complex, Entrance B</li>
-                            <li>Parking available in front of the building</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-3">Um Utheina Location</h4>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li>On Mecca Street main road</li>
-                            <li>Opposite Sultan Center</li>
-                            <li>Street parking available</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-blue-800 text-white py-8 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-xl mb-4">For More Information</p>
-            <p class="text-lg mb-4">Hotline: 078-778-7889</p>
-            <p class="text-lg">Everyone is welcome at our meetings</p>
+      {/* Important Information */}
+      <div className="mt-8 bg-blue-50 rounded-lg p-6">
+        <div className="flex items-center gap-2 mb-4">
+          <Info className="text-blue-600" />
+          <h2 className="text-xl font-bold">Important Information</h2>
         </div>
-    </footer>
-</body>
-</html>
+        <ul className="space-y-2">
+          <li>• No registration required - just show up</li>
+          <li>• Please arrive 15 minutes before meeting time</li>
+          <li>• We maintain strict confidentiality for all attendees</li>
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div className="mt-6 text-center p-4 bg-gray-50 rounded-lg">
+        <p className="font-bold text-lg mb-2">Need Help?</p>
+        <p className="text-blue-600 font-bold">Hotline: 078-778-7889</p>
+      </div>
+    </div>
+  );
+};
+
+export default NASchedule;
