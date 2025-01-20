@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sitemap for naamman.org -->
+<!-- Sitemap for najordan.org -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
     <!-- Homepage (Arabic) -->
     <url>
-        <loc>https://naamman.org/</loc>
+        <loc>https://najordan.org/</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://naamman.org/index-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://najordan.org/index-en.html"/>
     </url>
     
     <!-- Homepage (English) -->
     <url>
-        <loc>https://naamman.org/index-en.html</loc>
+        <loc>https://najordan.org/index-en.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://naamman.org/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://najordan.org/"/>
     </url>
     
     <!-- Literature Page (Arabic) -->
     <url>
-        <loc>https://naamman.org/pages/literature.html</loc>
+        <loc>https://najordan.org/pages/literature.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://naamman.org/pages/literature-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://najordan.org/pages/literature-en.html"/>
     </url>
     
     <!-- Literature Page (English) -->
     <url>
-        <loc>https://naamman.org/pages/literature-en.html</loc>
+        <loc>https://najordan.org/pages/literature-en.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://naamman.org/pages/literature.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://najordan.org/pages/literature.html"/>
     </url>
     
     <!-- Meetings Page (Arabic) -->
     <url>
-        <loc>https://naamman.org/pages/meetings.html</loc>
+        <loc>https://najordan.org/pages/meetings.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://naamman.org/pages/meetings-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://najordan.org/pages/meetings-en.html"/>
     </url>
     
     <!-- Meetings Page (English) -->
     <url>
-        <loc>https://naamman.org/pages/meetings-en.html</loc>
+        <loc>https://najordan.org/pages/meetings-en.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://naamman.org/pages/meetings.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://najordan.org/pages/meetings.html"/>
     </url>
 </urlset>
 
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sitemap for naamman.org -->
+<!-- Sitemap for najordan.org -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
     <!-- Homepage (Arabic) -->
     <url>
-        <loc>https://naamman.org/</loc>
+        <loc>https://najordan.org/</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://naamman.org/index-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://najordan.org/index-en.html"/>
     </url>
     
     <!-- Homepage (English) -->
     <url>
-        <loc>https://naamman.org/index-en.html</loc>
+        <loc>https://najordan.org/index-en.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://naamman.org/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://najordan.org/"/>
     </url>
     
     <!-- Literature Page (Arabic) -->
     <url>
-        <loc>https://naamman.org/pages/literature.html</loc>
+        <loc>https://najordan.org/pages/literature.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://naamman.org/pages/literature-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://najordan.org/pages/literature-en.html"/>
     </url>
     
     <!-- Literature Page (English) -->
     <url>
-        <loc>https://naamman.org/pages/literature-en.html</loc>
+        <loc>https://najordan.org/pages/literature-en.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://naamman.org/pages/literature.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://najordan.org/pages/literature.html"/>
     </url>
     
     <!-- Meetings Page (Arabic) -->
     <url>
-        <loc>https://naamman.org/pages/meetings.html</loc>
+        <loc>https://najordan.org/pages/meetings.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://naamman.org/pages/meetings-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://najordan.org/pages/meetings-en.html"/>
     </url>
     
     <!-- Meetings Page (English) -->
     <url>
-        <loc>https://naamman.org/pages/meetings-en.html</loc>
+        <loc>https://najordan.org/pages/meetings-en.html</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://naamman.org/pages/meetings.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://najordan.org/pages/meetings.html"/>
     </url>
 </urlset>
